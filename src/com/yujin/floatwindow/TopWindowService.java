@@ -83,6 +83,7 @@ public class TopWindowService extends Service {
             case HANDLE_SHOW_WINDOW:
                 if (!isAdded) {
                     wm.addView(btn_floatView, params);
+                    isAdded = true;
                 }
                 break;
             case HANDLE_HID_WINDOW:
