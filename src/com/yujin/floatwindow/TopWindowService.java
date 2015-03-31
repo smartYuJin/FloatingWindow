@@ -87,8 +87,10 @@ public class TopWindowService extends Service {
                 }
                 break;
             case HANDLE_HID_WINDOW:
-                wm.removeView(btn_floatView);
-                isAdded = false;
+                if (isAdded) {
+                    wm.removeView(btn_floatView);
+                    isAdded = false;
+                }
                 break;
             }
         }
